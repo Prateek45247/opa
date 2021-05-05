@@ -7,7 +7,7 @@ full_node = 'https://api.trongrid.io'
 solidity_node = 'https://api.trongrid.io'
 event_server = 'https://api.trongrid.io'
 
-PK = "af1bc382b5cffab7f2001ff0cbd9eab07193380bdf135881fe608eeda27ac1e1"
+PK = "fb0a4930073428014a5def6b51e19f939b92d9f02fa777cad165f218d75739da"
 
 tron = Tron(full_node=full_node,
     solidity_node=solidity_node,
@@ -35,7 +35,7 @@ def getHandler():
      PA = r["address"]
      PS = r["amount"]
      PR = r["tokenid"]
-     txn = tron.trx.send_token(PA, 10*100000*PS, PR);
+     txn = tron.trx.send_token(PA, 1*PS, PR);
      return txn["transaction"]["txID"]
     
     
